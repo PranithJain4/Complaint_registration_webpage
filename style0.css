@@ -1,0 +1,128 @@
+/* ========== Base ========== */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #222;
+}
+
+/* Header like your portal top bar */
+.app-header {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.app-header .logo { height: 44px; }
+.app-header .brand {
+  display: flex; flex-direction: column;
+  line-height: 1.1;
+}
+.brand .title { font-weight: 700; color: #1e2a78; }
+.brand .subtitle { font-size: 12px; color: #6b7280; }
+.app-header .page-title {
+  margin-left: auto;
+  font-weight: 700;
+}
+
+/* Page container */
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+/* Forms & cards */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  padding: 18px;
+}
+
+/* Inputs */
+label { display: block; font-size: 14px; color: #374151; margin: 10px 0 6px; }
+input[type="text"], input[type="email"], input[type="password"], textarea, select {
+  width: 100%; padding: 10px 12px; font-size: 14px;
+  border: 1px solid #d1d5db; border-radius: 8px; background: #fff;
+}
+textarea { min-height: 120px; resize: vertical; }
+input:focus, textarea:focus, select:focus {
+  outline: none; border-color: #f36f21; box-shadow: 0 0 0 3px rgba(243,111,33,.2);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block; border: none; cursor: pointer;
+  padding: 10px 16px; border-radius: 8px; font-weight: 600; font-size: 14px;
+  background: #1e2a78; color: #fff; transition: transform .02s ease-in;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-full { width: 100%; }
+.btn-secondary { background: #6b7280; }
+.btn-ghost { background: transparent; color: #1e2a78; }
+.btn-green { background: #16a34a; }     /* Present-like */
+.btn-red { background: #dc2626; }        /* Absent-like */
+.btn-orange { background: #f36f21; }
+
+/* Helper */
+.row { display: grid; gap: 16px; }
+.row-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.row-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+@media (max-width: 900px){ .row-3 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px){ .row-3, .row-2 { grid-template-columns: 1fr; } }
+
+.small { font-size: 12px; color: #6b7280; }
+
+/* Role/login panel */
+.login-wrap { max-width: 420px; margin: 30px auto; }
+
+/* Icon pill (used on complaint form) */
+.icon img {
+  background: #1e2a78; border-radius: 50%;
+  width: 50px; height: 50px; padding: 10px; display: block; margin: 0 auto 12px;
+}
+
+/* Teacher grid card (styled to match your screenshot) */
+.complaint-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+@media (max-width: 1100px){ .complaint-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 720px){ .complaint-grid { grid-template-columns: 1fr; } }
+
+.complaint-card {
+  background: #fff; border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+  padding: 16px;
+}
+
+.card-top {
+  display: grid; grid-template-columns: 48px 1fr; gap: 12px; align-items: center;
+}
+.avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: #e5e7eb; display: grid; place-items: center; font-size: 22px; color: #6b7280;
+}
+.name { font-weight: 700; }
+.code { font-size: 12px; color: #6b7280; margin-top: 2px; }
+.subject { font-size: 13px; color: #374151; margin-top: 6px; }
+
+.card-actions {
+  display: flex; gap: 12px; margin-top: 12px;
+}
+.status-chip {
+  margin-left: auto; align-self: center;
+  font-size: 12px; padding: 4px 8px; border-radius: 999px; background: #e5e7eb; color: #374151;
+}
+.status-chip.pending { background: #fff7ed; color: #9a3412; }   /* amber */
+.status-chip.resolved { background: #ecfdf5; color: #065f46; } /* green */
+
+/* Details reveal */
+.details { margin-top: 10px; font-size: 14px; color: #374151; display: none; }
+.details.show { display: block; }
+
+/* Tiny header toolbar */
+.toolbar { display: flex; gap: 16px; align-items: end; margin: 16px 0; }
+.toolbar .field { flex: 1; }
