@@ -16,7 +16,9 @@ Teachers  – to monitor and update the status.
 ⚙️ Tech Stack
 
 Frontend: HTML, CSS and Javascript
+
 Backend: PHP
+
 Database: MySQL
 
 🚀 Key Features
