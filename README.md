@@ -11,6 +11,7 @@ To create a digital bridge between students and the administration, making compl
 👥 Who It's For
 
 Students – to submit their complaints or issues through an online portal.
+
 Teachers  – to monitor and update the status.
 
 ⚙️ Tech Stack
